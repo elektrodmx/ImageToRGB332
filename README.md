@@ -1,14 +1,22 @@
 # ImageToRGB332
 Processing IDE image converter to use with Adafruit 8-bit colour graphics library.
-Use it to convert images from 24-bit RGB to text file with 8-bit RGB332 colours separated by commas.
+Use it to convert images from 24-bit RGB bitmap to text file with 8-bit RGB332 colours separated by commas, so You can easily use them in your 8-bit projects.
 
 Tested on resolutions up to 256 * 240px.
 
-# Converting
-Run or compile ImageToRGB332.pde with "input.bmp" file in project directory. It should output "output.txt" file. At file ending there's a width, height and pixels counter listed.
+## Features
+- Converting any .bmp file to RGB332 8-bit color char array.
+#### Future features
+- Dialog to manually select input bitmap file and output text filename.
+- Few converting options (Grayscale/Monochrome)
+- Drawing back image from generated file to check for errors.
 
-# Using converted file
-To display image from char array you need to draw all of pixels separately, so drawing can be slow at some cases. As I'm using ESP_8_BIT_GFX library to draw results on external display, "videoOut" class is used in my example.
+
+## Converting
+Run or compile ImageToRGB332.pde with "input.bmp" file in project directory. It should create "output.txt" file. At file ending there's a width, height and pixels counter listed.
+
+## Using converted file
+To display image from char array you need to draw all of pixels separately, so drawing can be slow at some cases. As I'm using ESP_8_BIT_GFX library to draw results on external display, "videoOut" class is used in my code example below:
 
 ```
 const unsigned char image[] = {   // Numbers manually copied from "output.txt" file
@@ -31,5 +39,3 @@ for (int y=0;y<imageheight;y++) {
   }
 }
 ```
-
-
