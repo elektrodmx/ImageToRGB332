@@ -13,10 +13,10 @@ Tested on resolutions up to 256 * 240px.
 
 
 ## Converting
-Run or compile ImageToRGB332.pde with "input.bmp" file in project directory. It should create "output.txt" file. At file ending there's a width, height and pixels counter listed.
+Run or compile ImageToRGB332.pde with "input.bmp" file in project directory. It should create "output.txt" file. At file ending there's a width, height and pixels counter listed. You can also download compiled Windows 64-bit executable from Releases tab (OpenJDK 17 need to be installed to run this application).
 
 ## Using converted file
-To display image from char array you need to draw all of pixels separately, so drawing can be slow at some cases. As I'm using ESP_8_BIT_GFX library to draw results on external display, "videoOut" class is used in my code example below:
+To display image from char array you need to draw each pixel separately, so drawing can be slow at some cases. As I'm using ESP_8_BIT_GFX library to draw results on external display, "videoOut" class is used in my code example below (working really fast on ESP32 with 256x240 bitmaps!):
 
 ```
 const unsigned char image[] = {   // Numbers manually copied from "output.txt" file
