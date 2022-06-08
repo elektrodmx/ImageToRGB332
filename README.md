@@ -1,14 +1,20 @@
 # ImageToRGB332
 Processing IDE image converter to use with Adafruit 8-bit colour graphics library.
-Use it to convert images from 24-bit RGB bitmap to text file with 8-bit RGB332 colours separated by commas, so You can easily use them in your 8-bit projects.
+Use it to convert images to text file with 8-bit RGB332 colours separated by commas, so You can easily use them in your 8-bit projects.
 
 Maximum resolution is 300 * 300px.
 
-## Features
+## Features:
+#### Now:
 - Converting any selected image file to RGB332 8-bit color char array.
-- Using one of three color modes (256/4/2 colors)
-- Redrawing converted image
-
+- Using one of three color modes (256/4/2 colors).
+- Redrawing converted image.
+#### Future features:
+- Option to build complete Arduino IDE code.
+- 512x512px resolution support.
+- Boolean array mode for monochrome mode.
+#### Also thinking about:
+- Monochrome and grayscale mode slider to control color translation with live preview.
 
 ## Converting
 Run or compile ImageToRGB332.pde. Select desired color mode and file. It should create .txt file named same as image file. At file ending there's a width, height and pixels counter listed. You can also download compiled Windows 64-bit executable from Releases tab (OpenJDK 17 need to be installed to run this application).
