@@ -2,7 +2,7 @@
 Processing IDE image converter to use with Adafruit 8-bit colour graphics library.
 Use it to convert images to text file with 8-bit RGB332 colours separated by commas, so You can easily use them in your 8-bit projects.
 
-Maximum resolution is 300 * 300px.
+Maximum resolution is 300x300px, larger images wont open.
 
 ## Features:
 #### Now:
