@@ -1,5 +1,5 @@
 # ImageToRGB332
-Processing IDE image converter to use with Adafruit 8-bit colour graphics library.
+Processing IDE image converter to use with Adafruit 8-bit colour graphics library (or any that uses RGB332).
 Use it to convert images to 8-bit RGB332 text file with ready-to-use char array and function snippet, so You can easily use them in your 8-bit projects.
 
 Maximum resolution is 500x500px, larger images wont open.
