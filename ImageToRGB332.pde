@@ -159,8 +159,10 @@ void draw() {
                 }
                 // Write to file
                 output.print(colorRGB332);
-                // Add comma and space for easy copying into array.
-                output.print(", ");
+                // Add comma and space for every but last element.
+                if (pixNum+1 < img.height*img.width) {
+                  output.print(", ");
+                  }
                 // Draw pixel
                 stroke(colorRGB332, colorRGB332, colorRGB332);
                 point(x + 575, y + 50);
@@ -182,8 +184,10 @@ void draw() {
                 }
                 // Write to file
                 output.print(colorRGB332);
-                // Add comma and space for easy copying into array.
-                output.print(", ");
+                // Add comma and space for every but last element.
+                if (pixNum+1 < img.height*img.width) {
+                  output.print(", ");
+                  }
                 // Draw pixel
                 stroke(colorRGB332, colorRGB332, colorRGB332);
                 point(x + 575, y + 50);
@@ -197,7 +201,7 @@ void draw() {
           output.println("}; ");
           output.println(" ");
           output.println("// function to display image:");
-          output.println("// drawImage(x,y)");
+          output.println("// drawImage(x,y);");
           output.println("void drawImage(int xPos,int yPos) {");
           output.println("  int pixCount = 0;");
           output.print("  for (int x=0;x<");
@@ -216,6 +220,7 @@ void draw() {
           // Close file
           output.close();
           converted = true;
+          pixNum = 0;
         }
       }
     }
